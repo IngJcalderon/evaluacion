@@ -1,0 +1,5 @@
+FROM openjdk:8-alpine
+ARG JAR_FILE=build/libs/*.jar
+COPY ${JAR_FILE} wsrest-eval-tecnica-0.0.1.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/wsrest-eval-tecnica-0.0.1.jar"]
